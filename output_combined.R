@@ -11,7 +11,7 @@ datum_summary <- st_read("data/results/fsb.shp")
 #---#---#---#---#---#---#---#---#---#---#---#---#
 # Merge outputs with geometry of EVLs
 summary_combined <- evl_union %>%
-  select(SITECODE, NAZEV) %>%
+  select(SITECODE, NAZEV, SHAPE_AREA) %>%
   left_join(st_drop_geometry(fsb_summary), by = "SITECODE") %>%
   left_join(st_drop_geometry(datum_summary), by = "SITECODE")
 

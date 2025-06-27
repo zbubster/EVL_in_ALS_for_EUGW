@@ -19,6 +19,7 @@ evl <- evl[idx == T, ]
 # Slouceni radku EVL, aggN reprezentuje pocet chranenych typu biotopu v danem EVL
 # (nepotrebuju mit pro kazde EVL vic polygonu, minimalne ne pro prvni dve analyzy)
 evl_union <- aggregate(evl, by = "SITECODE")
+names(evl_union)[names(evl_union) == "mean_SHAPE_AREA"] <- "SHAPE_AREA" # mean vznika ze stejnych hodnot, takze tohle neni zas takovy zlocin
 
 # Vyber segmentu VMB, ktere maji vztah s vybranymi EVL
 idx <- relate(vmb, evl_union, "T********", pairs = TRUE) # Vytvoření indexu všech překryvů (vmb vs. evl_union)
