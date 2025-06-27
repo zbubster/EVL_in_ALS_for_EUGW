@@ -29,4 +29,11 @@ fsb_summary <- vmb_joined %>%
 
 #---#---#---#---#---#---#---#---#---#---#---#---#
 # save results
+
+# create /out
+if(!dir.exists("data/out")){
+  dir.create("data/out", recursive = T)
+}
+
+# write layer
 st_write(fsb_summary, "data/results/fsb.shp")
