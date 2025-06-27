@@ -30,9 +30,9 @@ fsb_summary <- vmb_joined %>%
 #---#---#---#---#---#---#---#---#---#---#---#---#
 # save results
 
-# create /out
-if(!dir.exists("data/out")){
-  dir.create("data/out", recursive = T)
+# create /results
+if(!dir.exists("data/results")){
+  dir.create("data/results", recursive = T)
 }
 
 # write layer
