@@ -50,4 +50,4 @@ if(!dir.exists("data/results")){
 }
 
 # write layer
-st_write(datum_summary, "data/results/datum.shp")
+st_write(datum_summary, "data/results/datum.gpkg")

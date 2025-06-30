@@ -36,4 +36,4 @@ if(!dir.exists("data/results")){
 }
 
 # write layer
-st_write(fsb_summary, "data/results/fsb.shp")
+st_write(fsb_summary, "data/results/fsb.gpkg")
