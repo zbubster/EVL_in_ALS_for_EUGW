@@ -33,7 +33,7 @@ vector <- vector[, intersect(required_cols, names(vector))]
 ## Relevant mapping units
 # filter mozaics and non-mapped areas
 what_to_filter <- c("moz.", "-")
-vector <- vector[vector$FSB %in% what_to_filter,]
+vector <- vector[!vector$FSB %in% what_to_filter,]
 
 ## Load other datasets (Natura2000 sites with habitat protection, ALS bioclimatic zone)
 vmb <- vector; rm(vector); gc()
